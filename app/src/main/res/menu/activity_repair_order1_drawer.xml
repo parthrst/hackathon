@@ -12,6 +12,10 @@
             android:title="Your Orders"
             />
         <item
+            android:id="@+id/shipmet"
+            android:icon="@drawable/shipmet"
+            android:title="Pitney Details"/>
+        <item
             android:id="@+id/nav_send"
             android:icon="@drawable/ic_signout"
             android:title="Log Out" />

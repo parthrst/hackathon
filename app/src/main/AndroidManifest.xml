@@ -15,10 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".OrderPlaced"
-
-         />
-
+        <activity android:name=".shipment_api"></activity>
+        <activity android:name=".OrderPlaced" />
         <activity
             android:name=".Forgotpassword"
             android:label="Repairbuck"

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".shipment_api"
+    android:padding="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Shipment Details"
+            android:textSize="24sp"/>
+
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:src="@drawable/pitey"
+    android:id="@+id/shipmet_details"
+    android:layout_marginBottom="25dp"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/shipmet_details"
+        android:layout_marginTop="100dp"
+        android:text="A copy of this has been send to your mail also"
+        />
+
+    </LinearLayout>
+
+</android.widget.RelativeLayout>
