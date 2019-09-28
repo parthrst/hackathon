@@ -7,77 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".RepairOrder1"
     >
- <LinearLayout
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:layout_centerInParent="true"
-     android:gravity="center_horizontal"
-     android:orientation="vertical"
-     android:id="@+id/start"
-     >
-     <Button
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:text="Place Repair"
-         android:background="@color/colorBlack"
-         android:textColor="#FFFFFF"
-         android:fontFamily="@font/avenirheavy"
-         android:textSize="22.8sp"
-         android:id="@+id/place"
-         android:layout_marginLeft="20dp"
-         android:layout_marginRight="20dp"
-         android:onClick="placeOrder"
-         />
-     <Button
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:text="View Repairs"
-         android:background="@color/colorBlack"
-         android:textColor="#FFFFFF"
-         android:layout_marginTop="15dp"
-         android:fontFamily="@font/avenirheavy"
-         android:textSize="22.8sp"
-         android:id="@+id/view"
-         android:layout_marginLeft="20dp"
-         android:layout_marginRight="20dp"
-         android:onClick="viewOrder"/>
- </LinearLayout>
-    <LinearLayout
 
-        android:orientation="horizontal"
-        android:padding="13dp"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:id="@+id/progressbar_layout"
-        android:background="@drawable/myrect"
-        android:elevation="5dp">
-
-        <ProgressBar
-            android:id="@+id/loader"
-            android:layout_marginEnd="5dp"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:theme="@style/AppTheme"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:id="@+id/loading_msg"
-            android:fontFamily="@font/avenirlight"
-            android:textSize="15.311sp"
-            android:layout_height="wrap_content"
-            />
-    </LinearLayout>
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_centerInParent="true"
     android:id="@+id/next"
-    android:visibility="invisible"
+
     >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -111,7 +50,35 @@
     app:hintText="Device"
     />
     </LinearLayout>
+    <LinearLayout
 
+        android:orientation="horizontal"
+        android:padding="13dp"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/progressbar_layout"
+        android:background="@drawable/myrect"
+        android:elevation="5dp"
+        >
+
+        <ProgressBar
+            android:id="@+id/loader"
+            android:layout_marginEnd="5dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:theme="@style/AppTheme"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/loading_msg"
+            android:fontFamily="@font/avenirlight"
+            android:textSize="15.311sp"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -147,13 +114,6 @@
 
         />
     </LinearLayout>
-    <ProgressBar
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginLeft="120dp"
-        android:visibility="gone"
-        android:id="@+id/progBar"
-        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -189,18 +149,7 @@
         android:layout_marginTop="10dp"
         />
 
-    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-        android:id="@+id/laptop_spinner_seriesSearch"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="21sp"
-        android:textColor="#0d0101"
-        android:lineSpacingExtra="6.867sp"
-        android:fontFamily="@font/avenirlight"
-        app:hintText="Model"
-        app:fontFamily="@font/avenirlight"
-        android:layout_marginTop="10dp"
-        />
+
     </LinearLayout>
 
 </LinearLayout>

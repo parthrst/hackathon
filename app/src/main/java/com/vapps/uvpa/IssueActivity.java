@@ -31,8 +31,10 @@ public class IssueActivity extends AppCompatActivity
 {
     Intent i;
    CheckBox checkBox0,checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7;
+   TextView price,price1,price2,price3,price4,price5,price6,price7;
    JSONObject jsonObj;
    ArrayList<String> problemids;
+   ArrayList<String> prices;
 
     String[] type_repair=
             {"Battery Problem",
@@ -43,7 +45,7 @@ public class IssueActivity extends AppCompatActivity
             "Water Damage",
             "Headphone Jack Issue","Software Issue"};
 
-    //String[] est_price={"1500","1000","2500","1500","2000","1750","700","1000"};
+    String[] est_price={"1500","1000","2500","1500","2000","1750","700","1000"};
     public void nextActivity(View view) {
         Intent k = new Intent(IssueActivity.this, BackupPhoneSelection.class);
         if (problemids.size() == 0)
@@ -75,60 +77,74 @@ public class IssueActivity extends AppCompatActivity
         boolean checked=((CheckBox)view).isChecked();
         switch(view.getId()){
             case R.id.prob:
-                  if(checked){
+                  if(checked) {
                       problemids.add("0");
-                                       }
-                  else
+                  }else
                       problemids.remove("0");
+
                 break;
             case R.id.prob1:
                 if(checked){
                     problemids.add("1");
+
                 }
                 else
                     problemids.remove("1");
+
                 break;
             case R.id.prob2:
                 if(checked){
                     problemids.add("2");
+
                 }
                 else
                     problemids.remove("2");
+
                 break;
             case R.id.prob3:
                 if(checked){
                     problemids.add("3");
+
                 }
                 else
                     problemids.remove("3");
+
                 break;
             case R.id.prob4:
                 if(checked){
                     problemids.add("4");
+
                 }
                 else
                     problemids.remove("4");
+
                 break;
             case R.id.prob5:
                 if(checked){
                     problemids.add("5");
+
                 }
                 else
                     problemids.remove("5");
+
                 break;
             case R.id.prob6:
                 if(checked){
                     problemids.add("6");
+
                 }
                 else
                     problemids.remove("6");
+
                 break;
             case R.id.prob7:
                 if(checked){
                     problemids.add("7");
+
                 }
                 else
                     problemids.remove("7");
+
                 break;
         }
 
@@ -143,11 +159,18 @@ public class IssueActivity extends AppCompatActivity
         checkBox2=findViewById(R.id.prob2);checkBox3=findViewById(R.id.prob3);
         checkBox4=findViewById(R.id.prob4);checkBox5=findViewById(R.id.prob5);
         checkBox6=findViewById(R.id.prob6);checkBox7=findViewById(R.id.prob7);
+        price=findViewById(R.id.price);price1=findViewById(R.id.price1);
+        price2=findViewById(R.id.price2);price3=findViewById(R.id.price3);
+        price4=findViewById(R.id.price4);price5=findViewById(R.id.price5);
+        price6=findViewById(R.id.price6);price7=findViewById(R.id.price7);
         checkBox0.setText(type_repair[0]);checkBox1.setText(type_repair[1]);
         checkBox2.setText(type_repair[2]);checkBox3.setText(type_repair[3]);
         checkBox4.setText(type_repair[4]);checkBox5.setText(type_repair[5]);
         checkBox6.setText(type_repair[6]);checkBox7.setText(type_repair[7]);
-
+        price.setText(est_price[0]);price1.setText(est_price[0]);
+        price2.setText(est_price[0]);price3.setText(est_price[0]);
+        price4.setText(est_price[0]);price5.setText(est_price[0]);
+        price6.setText(est_price[0]);price7.setText(est_price[0]);
 
         problemids=new ArrayList<>();
 

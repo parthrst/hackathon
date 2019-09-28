@@ -60,62 +60,9 @@
             android:text="Recieved"
             />
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Total:"
-            android:fontFamily="@font/avenirheavy"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/total"
-            android:layout_marginLeft="2dp"
-            android:fontFamily="@font/avenirlight"
-            android:text="Recieved"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mobile No:"
-            android:fontFamily="@font/avenirheavy"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/txnid"
-            android:layout_marginLeft="2dp"
-            android:fontFamily="@font/avenirlight"
-            android:text="Recieved"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Transaction Status:"
-            android:fontFamily="@font/avenirheavy"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/txnstatus"
-            android:layout_marginLeft="2dp"
-            android:fontFamily="@font/avenirlight"
-            android:text="Recieved"
-            />
-    </LinearLayout>
+
+
+
+
 
 </LinearLayout>

@@ -49,6 +49,7 @@ public class ConfirnmationActivity extends AppCompatActivity
      TextView brand;
      TextView model;
      TextView total;
+     TextView shiping_view;
      String addressString;
      //String modelString;
      String totalString;
@@ -77,14 +78,15 @@ public class ConfirnmationActivity extends AppCompatActivity
              String str = intentget.getStringExtra("confirm");
               location = intentget.getStringExtra("location");
               gadget = intentget.getStringExtra("gadget");
+              shiping_view=findViewById(R.id.shiping_charge);
               Log.i("META10",str);
              Log.i("META10",location);
              Log.i("META10",gadget);
 
-                 baseprice=150;
+                 baseprice=1500;
 
             // Log.i("base",baseprice);
-             baseamount.setText(baseprice.toString());
+
          try {
              JSONObject detials = new JSONObject(str);
              JSONObject det = new JSONObject(location);
@@ -150,21 +152,8 @@ public class ConfirnmationActivity extends AppCompatActivity
                                                 brand.setText(brandString);
                                               }
              model.setText(model_id);
-             String phone = inner.getString("phone");
-             Log.i("total",phone);
-             if (phone.equals("1"))
-             { backup.setText("100");
-                 baseprice = baseprice+100;
-                 totalString = baseprice.toString();
-             }
-
-             else
-             {    backup.setText("0");
-                 totalString = baseprice.toString();
-             }
-
-             Log.i("total",totalString);
-             total.setText(totalString);
+int shiping=100;
+shiping_view.setText(String.valueOf(shiping));
              Log.i("Detials", detials.toString());
              String problemString="";
              String bprob = inner.getString("problem_ids");
@@ -176,6 +165,7 @@ public class ConfirnmationActivity extends AppCompatActivity
             else {
                  problem = inner.getJSONArray("problem_ids");
              }
+
              //ArrayList<String> strings;
             // strings= inner.get
                         for (int j = 0; j < problem.length(); j++)
@@ -212,7 +202,24 @@ public class ConfirnmationActivity extends AppCompatActivity
                             issue.setText(problemString);
                             Log.i("issue", problemString);
                         }
+                        baseprice*=problem.length();
+             baseamount.setText(baseprice.toString());
+             String phone = inner.getString("phone");
+             Log.i("total",phone);
+             baseprice+=shiping;
+             if (phone.equals("1"))
+             { backup.setText("100");
+                 baseprice = baseprice+100;
+                 totalString = baseprice.toString();
+             }
 
+             else
+             {    backup.setText("0");
+                 totalString = baseprice.toString();
+             }
+
+             Log.i("total",totalString);
+             total.setText(totalString);
 
 
 

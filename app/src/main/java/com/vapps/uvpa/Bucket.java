@@ -70,9 +70,9 @@ public class Bucket extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("user_details",MODE_PRIVATE);
         String auth=sharedPreferences.getString("auth_token",null);
         Model modelLoader = new Model();
-        modelLoader.execute("https://www.repairbuck.com/mobpayments.json?auth_token="+auth);
+        modelLoader.execute("https://www.repairbuck.com/mobbuckets.json?auth_token="+auth);
           }
-    public int add(String id,String brand,String model,String problem,String backup,String address,String total,String txnid,String txnstatus ) {
+    public int add(String id,String brand,String model,String problem,String backup,String address ) {
         int groupPosition = 0;
         ArrayList<Header> arrayList;
         Header info = headerList.get(id);
@@ -99,9 +99,8 @@ public class Bucket extends AppCompatActivity {
             detail.setBackupPhone("No");
         }
         detail.setAddress(address);
-        detail.setTotal(total);
-        detail.setPhoneNo(txnid);
-        detail.setTxnStatus(txnstatus);
+
+
         prod.add(detail);
         info.setList(prod);
         groupPosition = details.indexOf(info);
@@ -142,11 +141,12 @@ public class Bucket extends AppCompatActivity {
         @Override
         protected void onPostExecute(String response) {
             super.onPostExecute(response);
-
+             // Log.i("testing",response);
+            JSONObject jsonObject=new JSONObject();
             linearLayout.setVisibility(View.GONE);
               try {
                 JSONArray jsonArray = new JSONArray(response);
-
+                  //Log.i("testing",response);
                   if(jsonArray.toString().equals("[]")){
 
                       text.setVisibility(View.VISIBLE);
@@ -156,16 +156,24 @@ public class Bucket extends AppCompatActivity {
                       flag = 1;
 
                       for (int i = 0; i < jsonArray.length(); ++i) {
-                          JSONObject jsonObject = jsonArray.getJSONObject(i);
-                          String id = jsonObject.getString("repair_id");
+                          Log.i("testing",jsonArray.getJSONObject(i).toString());
+                           jsonObject = jsonArray.getJSONObject(i);
+                          String id = jsonObject.getString("id");
+                          Log.i("idrep",id);
                           String company_id = jsonObject.getString("company_name");
+                          Log.i("comprep",company_id);
                           String model_id = jsonObject.getString("model_name");
+                          Log.i("modelrep",model_id);
                           JSONArray problem = jsonObject.getJSONArray("problem_id");
+                          Log.i("probrep",problem.toString());
                           String backup_phone = jsonObject.getString("phone");
+                          Log.i("backrep",backup_phone);
                           String address = jsonObject.getString("room") + "," + jsonObject.getString("street") + "," + jsonObject.getString("area") + "," + jsonObject.getString("city");
-                          String txnstatus = jsonObject.getString("status");
-                          String phoneNo = jsonObject.getString("mobile");
-                          String total = jsonObject.getString("amount");
+                          Log.i("addrep",address);
+
+                          Log.i("rep",id);
+
+
                           String str = "";
                           Log.i("Repsonse", jsonObject.toString());
                           for (int j = 0; j < problem.length(); j++) {
@@ -198,10 +206,10 @@ public class Bucket extends AppCompatActivity {
                                       break;
                               }
                           }
-                          totalList.add(total);
-                          txnStatusList.add(txnstatus);
+
+
                           addressList.add(address);
-                          mobileList.add(phoneNo);
+
                           idList.add(id);
                           modelList.add(model_id);
                           brandList.add(company_id);
@@ -216,7 +224,7 @@ public class Bucket extends AppCompatActivity {
             if(flag!=0)
             {
                 for (int i = 0; i < idList.size(); i++) {
-                    add(idList.get(i), brandList.get(i), modelList.get(i), problemidList.get(i), backupList.get(i), addressList.get(i), totalList.get(i), mobileList.get(i), txnStatusList.get(i));
+                    add(idList.get(i), brandList.get(i), modelList.get(i), problemidList.get(i), backupList.get(i), addressList.get(i));
                 }
 
                 adapter = new Dataadapter(Bucket.this, details);
