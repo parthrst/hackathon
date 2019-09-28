@@ -30,7 +30,7 @@ import java.util.HashMap;
 import java.util.Random;
 
 public class Checksum extends AppCompatActivity implements PaytmPaymentTransactionCallback
-{
+ {
     String custid="", orderId="", mid="";
     SharedPreferences sharedPreferences;
     JSONObject orderDetail;
@@ -87,8 +87,9 @@ public class Checksum extends AppCompatActivity implements PaytmPaymentTransacti
         {
             e.printStackTrace();
         }
-        payment.execute("https://www.repairbuck.com/mobbuckets.json?auth_token="+sharedPreferences.getString("auth_token",null),orderHolder.toString());
-// vollye , retrofit, asynch
+       // payment.execute("https://www.repairbuck.com/mobbuckets.json?auth_token="+sharedPreferences.getString("auth_token",null),orderHolder.toString());
+
+        // vollye , retrofit, asynch
 
     }
 
@@ -167,7 +168,7 @@ public class Checksum extends AppCompatActivity implements PaytmPaymentTransacti
             Service.startPaymentTransaction( Checksum.this, true, true, Checksum.this);
         }
     }
-    Payment payment = new Payment();
+   // Payment payment = new Payment();
     @Override
     public void onTransactionResponse(Bundle bundle)
     {

@@ -216,7 +216,9 @@ public class ConfirnmationActivity extends AppCompatActivity
 
 
 
-         }catch (JSONException e) {
+         }
+         catch (JSONException e)
+         {
              e.printStackTrace();
          }
          address.setText(addressString);
@@ -253,7 +255,7 @@ public class ConfirnmationActivity extends AppCompatActivity
  {
      postOrder.execute(repairUrl + sharedPreferences.getString("auth_token", null), jsonObj.toString());
 
-     Intent intent = new Intent(ConfirnmationActivity.this,Checksum.class);
+     Intent intent = new Intent(ConfirnmationActivity.this,OrderPlaced.class);
      intent.putExtra("gadget",gadget);
      intent.putExtra("totalAmount",totalString);
      startActivity(intent);
@@ -374,7 +376,7 @@ public class ConfirnmationActivity extends AppCompatActivity
          protected void onPreExecute() {
              super.onPreExecute();
              // loadingMsg.setText("Loading");
-             linearLayout.setVisibility(View.VISIBLE);
+            // linearLayout.setVisibility(View.VISIBLE);
          }
 
          @Override
@@ -412,7 +414,7 @@ public class ConfirnmationActivity extends AppCompatActivity
          protected void onPostExecute(String response)
          {
 
-             linearLayout.setVisibility(View.INVISIBLE);
+           //  linearLayout.setVisibility(View.INVISIBLE);
              super.onPostExecute(response);
              try {
                  JSONObject jsonResponse = new JSONObject(response);
