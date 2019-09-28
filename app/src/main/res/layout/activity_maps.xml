@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:padding="13dp"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/progressbar_layout"
+        android:background="@drawable/myrect"
+        android:elevation="5dp">
+
+        <ProgressBar
+            android:id="@+id/loader"
+            android:layout_marginEnd="5dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:theme="@style/AppTheme"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Fetching Your Location.."
+            android:layout_gravity="center_vertical"
+            android:id="@+id/loading_msg"
+            android:fontFamily="@font/avenirlight"
+            android:textSize="15.311sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+
+<LinearLayout
+
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+tools:context=".MapsActivity"
+android:orientation="vertical">
+
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        map:cameraZoom="12"
+        tools:context=".MapsActivity" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:textColor="#0d0101"
+        android:lineSpacingExtra="8.24sp"
+        android:gravity="center_horizontal"
+        android:text="Set pickup location"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="22.5dp"
+        android:layout_marginRight="22.5dp"
+        android:fontFamily="@font/averin"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18.311sp"
+        android:textColor="#525050"
+        android:lineSpacingExtra="6.867sp"
+        android:gravity="center_horizontal"
+        android:text="House/Flat No:"
+        android:layout_marginTop="15.117dp"
+        android:layout_marginLeft="22.5dp"
+        android:fontFamily="@font/averinroman"
+        android:layout_marginRight="22.5dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18.311sp"
+        android:textColor="#0d0101"
+        android:lineSpacingExtra="6.867sp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginLeft="22.5dp"
+        android:fontFamily="@font/avenirlight"
+        android:id="@+id/hno"
+        android:layout_marginRight="22.5dp"
+        android:maxLines="1"
+        android:singleLine="true"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18.311sp"
+        android:textColor="#525050"
+        android:lineSpacingExtra="6.867sp"
+        android:gravity="center_horizontal"
+        android:text="Locality/Landmark:"
+        android:layout_marginTop="15.117dp"
+        android:layout_marginLeft="22.5dp"
+        android:fontFamily="@font/averinroman"
+        android:layout_marginRight="22.5dp"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18.311sp"
+        android:textColor="#0d0101"
+        android:lineSpacingExtra="6.867sp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/avenirlight"
+        android:id="@+id/lndmrk"
+        android:layout_marginRight="22.5dp"
+        android:layout_marginLeft="22.5dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18.311sp"
+        android:textColor="#525050"
+        android:gravity="center_horizontal"
+        android:text="Your Coordinated Location:"
+        android:layout_marginTop="15.44dp"
+        android:fontFamily="@font/averin"
+        android:layout_marginLeft="22.5dp"
+        android:layout_marginRight="22.5dp"
+
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorBlack"
+        android:layout_marginLeft="22.5dp"
+        android:layout_marginRight="22.5dp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#0d0101"
+        android:lineSpacingExtra="6.867sp"
+        android:layout_marginLeft="22.5dp"
+        android:layout_marginRight="22.5dp"
+        android:fontFamily="@font/avenirheavy"
+        android:id="@+id/location"
+        android:layout_marginTop="12dp"
+
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlack"
+        android:text="CONTINUE"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/avenirheavy"
+        android:textSize="22.8sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentBottom="true"
+        android:onClick="nextActivity"/>
+
+
+</LinearLayout>
+</ScrollView>
+
+</RelativeLayout>
+

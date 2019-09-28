@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirnmationActivity">
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:padding="13dp"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:id="@+id/progressbar_layout"
+        android:background="@drawable/myrect"
+        android:elevation="5dp">
+
+        <ProgressBar
+            android:id="@+id/loader"
+            android:layout_marginEnd="5dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:theme="@style/AppTheme"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Loading..."
+            android:layout_gravity="center_vertical"
+            android:id="@+id/loading_msg"
+            android:fontFamily="@font/avenirlight"
+            android:textSize="15.311sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="17.458dp"
+        android:layout_marginLeft="17.458dp"
+        android:layout_marginBottom="15dp"
+        >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:textColor="#070606"
+        android:lineSpacingExtra="2sp"
+        android:gravity="left"
+        android:fontFamily="@font/avenirheavy"
+        android:text="Your Repair details:"
+        android:layout_marginBottom="8dp"
+
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/myrect"
+        android:elevation="5dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:padding="5dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18.311sp"
+            android:textColor="#070606"
+            android:lineSpacingExtra="1.8sp"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/avenirheavy"
+            android:text="Device"
+
+
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorBlack"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18.311sp"
+            android:textColor="#070606"
+            android:lineSpacingExtra="1.8sp"
+            android:layout_gravity="left"
+            android:fontFamily="@font/avenirbook"
+            android:text="Company:"
+
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18.311sp"
+            android:textColor="#070606"
+            android:lineSpacingExtra="1.8sp"
+            android:fontFamily="@font/avenirmedium"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:id="@+id/brand_disp"
+            />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18.311sp"
+                android:textColor="#070606"
+                android:lineSpacingExtra="1.8sp"
+                android:gravity="start"
+                android:fontFamily="@font/avenirbook"
+                android:text="Model:"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18.311sp"
+                android:textColor="#070606"
+                android:lineSpacingExtra="1.8sp"
+                android:fontFamily="@font/avenirmedium"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:id="@+id/model_disp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18.311sp"
+            android:textColor="#070606"
+            android:lineSpacingExtra="1.8sp"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/avenirheavy"
+            android:text="Issue"
+            android:layout_marginBottom="2dp"
+
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorBlack"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18.311sp"
+            android:textColor="#070606"
+            android:fontFamily="@font/avenirmedium"
+            android:lineSpacingExtra="1.8sp"
+            android:gravity="center_horizontal"
+            android:text="Battery issue"
+            android:layout_marginBottom="6dp"
+            android:id="@+id/issue_disp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorBlack"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18.311sp"
+                android:textColor="#070606"
+                android:lineSpacingExtra="1.8sp"
+                android:layout_gravity="start"
+                android:fontFamily="@font/avenirheavy"
+                android:text="Basic Charge:"
+
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18.311sp"
+                android:textColor="#070606"
+                android:lineSpacingExtra="1.8sp"
+                android:fontFamily="@font/avenirmedium"
+                android:text="$"
+                android:id="@+id/basic_charge"
+                android:layout_marginLeft="2dp"
+
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/backup_layout"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18.311sp"
+                android:textColor="#070606"
+                android:lineSpacingExtra="1.8sp"
+                android:layout_gravity="start"
+                android:fontFamily="@font/avenirheavy"
+                android:text="Backup Phone:"
+                android:layout_marginBottom="2dp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18.311sp"
+                android:textColor="#070606"
+                android:lineSpacingExtra="1.8sp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/avenirmedium"
+                android:layout_marginBottom="2dp"
+                android:id="@+id/backup_price"
+
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorBlack"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18.311sp"
+                android:textColor="#070606"
+                android:lineSpacingExtra="1.8sp"
+                android:layout_gravity="start"
+                android:fontFamily="@font/avenirheavy"
+                android:text="Total:"
+                android:layout_marginBottom="4dp"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18.311sp"
+                android:textColor="#070606"
+                android:lineSpacingExtra="1.8sp"
+                android:layout_gravity="end"
+                android:fontFamily="@font/avenirmedium"
+                android:text="INR"
+                android:layout_marginLeft="2dp"
+                android:layout_marginBottom="2dp"
+                android:id="@+id/total_disp"
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/myrect"
+        android:elevation="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:padding="5dp"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textColor="#070606"
+            android:lineSpacingExtra="2sp"
+            android:layout_gravity="left"
+            android:fontFamily="@font/avenirheavy"
+            android:text="Pickup Address:"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="1dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18.311sp"
+            android:textColor="#070606"
+            android:fontFamily="@font/avenirlight"
+            android:text="30,UthsuryanNagar, Urapakkam, Guduvancherry , Chennai , Tamil Nadu ,
+603202"     android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:id="@+id/address_disp"
+            />
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlack"
+        android:text="CONTINUE"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/avenirheavy"
+        android:textSize="22.8sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:onClick="nextActivity"/>
+
+</RelativeLayout>
