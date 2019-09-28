@@ -223,7 +223,9 @@ shiping_view.setText(String.valueOf(shiping));
 
 
 
-         }catch (JSONException e) {
+         }
+         catch (JSONException e)
+         {
              e.printStackTrace();
          }
          address.setText(addressString);
@@ -260,7 +262,7 @@ shiping_view.setText(String.valueOf(shiping));
  {
      postOrder.execute(repairUrl + sharedPreferences.getString("auth_token", null), jsonObj.toString());
 
-     Intent intent = new Intent(ConfirnmationActivity.this,Checksum.class);
+     Intent intent = new Intent(ConfirnmationActivity.this,OrderPlaced.class);
      intent.putExtra("gadget",gadget);
      intent.putExtra("totalAmount",totalString);
      startActivity(intent);
@@ -381,7 +383,7 @@ shiping_view.setText(String.valueOf(shiping));
          protected void onPreExecute() {
              super.onPreExecute();
              // loadingMsg.setText("Loading");
-             linearLayout.setVisibility(View.VISIBLE);
+            // linearLayout.setVisibility(View.VISIBLE);
          }
 
          @Override
@@ -419,7 +421,7 @@ shiping_view.setText(String.valueOf(shiping));
          protected void onPostExecute(String response)
          {
 
-             linearLayout.setVisibility(View.INVISIBLE);
+           //  linearLayout.setVisibility(View.INVISIBLE);
              super.onPostExecute(response);
              try {
                  JSONObject jsonResponse = new JSONObject(response);
